@@ -6,7 +6,7 @@ function App() {
   const [data, sedata]=useState('');
   const [favIds, setFavId]=useState([]);
   const [screen, setScreen] = useState('home');
-  useEffect(()=>{fetch('http://api.tvmaze.com/shows')
+  useEffect(()=>{fetch('https://api.tvmaze.com/shows')
                 .then((result)=>result.json())
                 .then((result)=>sedata(result))
                 .catch((error)=>console.log(error))}
